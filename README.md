@@ -6,7 +6,7 @@
 - Designed for resource-constrained embedded devices  
 
 ### Python Pentest Tool  
-- Simulates 50+ IoT-based exploits  
+- Simulates 10+ IoT-based exploits  
 - Covers hardware and network attack vectors  
 - Generates automated JSON reports for analysis  
 
