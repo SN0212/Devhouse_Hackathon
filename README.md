@@ -17,8 +17,8 @@
 bash - python3 hardware_attack_v4.py --port /dev/ttyUSB0 --test critical
 
 ### Key Metrics  
-- 90% detection accuracy  
-- Less than 10% false positive rate   
+- > 80% detection accuracy  
+- Less than 20% false positive rate   
 
 ### Ideal For  
 - Smart home environments  
