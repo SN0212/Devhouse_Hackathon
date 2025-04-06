@@ -17,7 +17,7 @@
 bash - python3 hardware_attack_v4.py --port /dev/ttyUSB0 --test critical
 
 ### Key Metrics  
-- > 80% detection accuracy  
+- More than 80% detection accuracy  
 - Less than 20% false positive rate   
 
 ### Ideal For  
