@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "scanner_version": "4.0",
+    "scan_start": "2025-04-06T06:53:24.746142",
+    "environment": {
+      "os": "nt",
+      "python": "3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)]"
+    },
+    "scan_end": "2025-04-06T06:53:37.211600"
+  },
+  "device": {
+    "port": "COM7",
+    "vendor": "............................................................................ets Jul 29 2019 12:21:46\r\n\r\nrst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)\r\nconfigsip: 0, SPIWP:0xee\r\nclk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00\r\nmode:DIO, clock div:1\r\nload:0x3fff0030,len:4832\r\nload:0x40078000,len:16460\r\nload:0x40080400,len:4\r\nload:0x40080404,len:3504\r\nentry 0x400805cc",
+    "type": "Unknown",
+    "firmware": ".",
+    "hardware_details": {},
+    "security_features": {
+      "secure_boot": "Enabled",
+      "flash_encryption": "Enabled",
+      "efuse_protection": "Disabled/Unknown"
+    },
+    "model": ".",
+    "imei": ".",
+    "chip_id": ".",
+    "mac": "."
+  },
+  "findings": {
+    "vulnerabilities": [
+      {
+        "title": "Authentication Bypass",
+        "details": "Default admin credentials: Possible authentication bypass",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:31.328787",
+        "request": "admin:admin\r\n",
+        "response": "",
+        "mitigation": "Implement strong password policies and multi-factor authentication"
+      },
+      {
+        "title": "Authentication Bypass",
+        "details": "Root user attempt: Possible authentication bypass",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:31.328787",
+        "request": "root:root\r\n",
+        "response": "",
+        "mitigation": "Implement strong password policies and multi-factor authentication"
+      },
+      {
+        "title": "Authentication Bypass",
+        "details": "Null byte injection: Possible authentication bypass",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:31.338818",
+        "request": "admin:\u0000\r\n",
+        "response": "",
+        "mitigation": "Implement strong password policies and multi-factor authentication"
+      },
+      {
+        "title": "Authentication Bypass",
+        "details": "Common password attempt: Possible authentication bypass",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:31.352124",
+        "request": "admin:password123\r\n",
+        "response": "",
+        "mitigation": "Implement strong password policies and multi-factor authentication"
+      },
+      {
+        "title": "Authentication Bypass",
+        "details": "Bluetooth pairing attempt: Possible authentication bypass",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:31.354112",
+        "request": "AT+CMNG=0,0,\"0000\"\r\n",
+        "response": "",
+        "mitigation": "Implement strong password policies and multi-factor authentication"
+      },
+      {
+        "title": "Buffer Overflow",
+        "details": "Basic buffer overflow: Possible memory corruption",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:31.427410",
+        "request": "41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410d0a",
+        "response": "",
+        "mitigation": "Implement proper bounds checking and use memory-safe languages"
+      },
+      {
+        "title": "Buffer Overflow",
+        "details": "Null byte overflow: Possible memory corruption",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:31.447895",
+        "request": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d0a",
+        "response": "",
+        "mitigation": "Implement proper bounds checking and use memory-safe languages"
+      },
+      {
+        "title": "Buffer Overflow",
+        "details": "Format string attack: Possible memory corruption",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:31.447895",
+        "request": "256e256e256e256e256e0d0a",
+        "response": "",
+        "mitigation": "Implement proper bounds checking and use memory-safe languages"
+      },
+      {
+        "title": "Buffer Overflow",
+        "details": "Structured overflow: Possible memory corruption",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:31.463561",
+        "request": "41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141",
+        "response": "",
+        "mitigation": "Implement proper bounds checking and use memory-safe languages"
+      },
+      {
+        "title": "Buffer Overflow",
+        "details": "Large binary payload: Possible memory corruption",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:31.559457",
+        "request": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "response": "",
+        "mitigation": "Implement proper bounds checking and use memory-safe languages"
+      },
+      {
+        "title": "Secure Boot Bypass",
+        "details": "Secure Boot signature padding attack: Possible Secure Boot bypass",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:34.660859",
+        "request": "0000000000000000000000000000000012345678",
+        "response": "",
+        "mitigation": "Review and harden the affected component"
+      },
+      {
+        "title": "Secure Boot Bypass",
+        "details": "Secure Boot null signature attack: Possible Secure Boot bypass",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:34.661944",
+        "request": "00000000000000000000000000000000deadbeef",
+        "response": "",
+        "mitigation": "Review and harden the affected component"
+      },
+      {
+        "title": "Secure Boot Bypass",
+        "details": "Secure Boot flash dump trigger: Possible Secure Boot bypass",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:34.661944",
+        "request": "ffffffffffffffffffffffffffffffff12345678",
+        "response": "",
+        "mitigation": "Review and harden the affected component"
+      },
+      {
+        "title": "Secure Boot Bypass",
+        "details": "Secure Boot disable attempt: Possible Secure Boot bypass",
+        "severity": "Critical",
+        "timestamp": "2025-04-06T06:53:34.666501",
+        "request": "41542b534543424f4f543d300d0a",
+        "response": "",
+        "mitigation": "Review and harden the affected component"
+      },
+      {
+        "title": "Timing Attack",
+        "details": "Secure boot delay attack: Timing variation detected (\u03c3=0.37)",
+        "severity": "Medium",
+        "timestamp": "2025-04-06T06:53:36.535642",
+        "request": "41542b44454c41593d313030300d0a",
+        "response": "Timing measurements: [429700, 450400, 507900, 423800, 349700] ns",
+        "mitigation": "Review and harden the affected component"
+      },
+      {
+        "title": "Timing Attack",
+        "details": "Timing measurement trigger: Timing variation detected (\u03c3=0.28)",
+        "severity": "Medium",
+        "timestamp": "2025-04-06T06:53:37.045821",
+        "request": "41542b54494d494e473d310d0a",
+        "response": "Timing measurements: [581700, 442000, 539100, 461600, 590200] ns",
+        "mitigation": "Review and harden the affected component"
+      }
+    ],
+    "stats": {
+      "total_tests": 103,
+      "tests_passed": 87,
+      "tests_failed": 16
+    }
+  }
+}
