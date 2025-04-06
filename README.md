@@ -1,19 +1,26 @@
-ESP32 Real-Time Cyberattack Detection using TinyML
+# IoT Security Firewall & Pentest Tool
 
-🚀 Real-time network attack detection using ESP32 in promiscuous mode and a trained deep learning model (TinyML). This project captures WiFi packets, extracts key features, classifies them as normal or attack traffic using a lightweight neural network, and triggers alerts.
+### ESP32 Firewall  
+- Real-time attack detection using entropy and behavioral analysis  
+- Adaptive learning with MinHash and TTL-based expiry  
+- Designed for resource-constrained embedded devices  
 
-This project detects cyberattacks (e.g., SYN Flood, UDP Flood, ICMP Flood, Port Scans) in real-time using ESP32 as a packet sniffer and a pre-trained neural network (converted to C array format for deployment). The attack classification results are logged and analyzed using Python & Scapy.
+### Python Pentest Tool  
+- Simulates 50+ IoT-based exploits  
+- Covers hardware and network attack vectors  
+- Generates automated JSON reports for analysis  
 
-🔹 Key Features:
+### Quick Start  
+1. Flash `esp32_firewall.ino` to your ESP32  
+2. Run penetration tests with:  
+   cmd - python hardware_attack_v4.py
+bash - python3 hardware_attack_v4.py --port /dev/ttyUSB0 --test critical
 
-✔ ESP32 in WiFi Promiscuous Mode for packet sniffing
+### Key Metrics  
+- 90% detection accuracy  
+- Less than 10% false positive rate   
 
-✔ Feature extraction (Protocol, Ports, TTL, Packet Size, etc.)
-
-✔ TinyML Model for cyberattack classification
-
-✔ Alerts on detected attacks via Serial Monitor
-
-✔ Python-based attack traffic generator
-
-✔ Live logging to CSV for analysis
+### Ideal For  
+- Smart home environments  
+- Industrial IoT infrastructures  
+- Cybersecurity researchers and analysts  
